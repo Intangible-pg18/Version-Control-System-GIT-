@@ -1,0 +1,48 @@
+Introduction-
+
+In this scenario, you are a project lead in an IT company. You and your team are working on a huge project, which consists of multiple functionalities and 
+modules. This project is evolving over time and so your team is expecting a lot of code revisions.You'll configure your Git user information, create a local
+Git repository, add a file to the repository, and do some basic operations like adding a file, editing files, and making commits.
+
+********************
+Installing Git-
+
+sudo apt update
+sudo apt install git
+git --version
+
+********************
+Initializing a new repository-
+
+mkdir my-git-repo
+cd my-git-repo
+git init
+
+********************
+Configuring Git-
+
+git config --global user.name "Prateek"
+git config --global user.email "iamprateek999@.com"
+
+********************
+Operations-
+
+touch New_file
+vim New_file
+Inserting-: This is my first repository. Saving the file.
+git status
+git add New_file
+git commit
+Adding commit message-: This is my first commit!
+
+********************
+Re-editing-
+
+vim New_file
+Inserting-: A repository is a location where all the files of a particular project are stored. Saving the file.
+git status
+git diff New_file
+git add New_file
+git status
+git commit -m "This is my second commit."
+git log
