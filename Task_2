@@ -1,0 +1,48 @@
+Introduction-
+
+Check the status and history of an existing Git repo///Create a branch///Modify content on the branch///Make rollback changes///Merge the branch
+
+********************
+Exploring repository-
+
+cd ~/food-scripts
+cat favorite_foods.log
+./food_count.py
+./food_question.py
+
+********************
+Understanding the repository-
+
+git status
+git log
+git config user.name "Eddie"
+git config user.email "iamprateek999@.com"
+
+********************
+Creating a new branch for adding a new feature-
+
+git branch improve-output
+git checkout improve-output
+vim food_count.py
+Inserting-: print("Favourite foods, from most popular to least popular")
+./food_count.py
+git add food_count.py
+git commit -m "Adding a line in the output describing the utility of food_count.py script"
+
+********************
+Fixing the script-
+
+./food_question.py
+git log and then copying the commit ID of the commit that is causing the problem
+git revert [521747298a3790fde1710f3aa2d03b55020575aa]
+./food_question.py
+
+
+********************
+Merging operation-
+
+git checkout master
+git merge improve-output
+./food_question.py
+git status
+git log
