@@ -1,0 +1,41 @@
+Introduction-
+
+Fork an existing repository, fix a bug in a script, push the commits to GitHub, and create a pull request with the commit.
+
+
+********************
+Forking and detecting function behavior-
+git clone [URL]
+cd ~/it-cert-automation-practice
+git remote -v
+git remote add upstream [URL]
+git remote -v
+
+********************
+Configure Git-
+git config --global user.name "Name"
+git config --global user.email "user@example.com"
+
+********************
+Fix the script-
+git branch improve-username-behavior
+git checkout improve-username-behavior
+cd ~/it-cert-automation-practice/Course3/Lab4
+nano validations.py -> print(validate_user("blue.kale", 3)) # True
+                       print(validate_user(".blue.kale", 3)) # Currently True, should be False
+                       print(validate_user("red_quinoa", 4)) # True
+                       print(validate_user("_red_quinoa", 4)) # Currently True, should be False
+python3 validations.py
+git status
+git add validations.py
+git status
+git commit -> Closes: #1
+              Updated validations.py python script.
+              Fixed the behavior of validate_user function in validations.py.
+
+********************
+Push changes-
+git push origin improve-username-behavior
+
+********************
+Create a pull request from your forked repository.
